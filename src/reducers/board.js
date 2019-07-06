@@ -1,8 +1,11 @@
+import { map } from 'ramda';
+
 import { CollectItem } from '../entities/CollectItem';
 import { randomstring } from '../util/randomString';
+import { itemsData } from '../util/items';
 
 const initialState = {
-  items: [new CollectItem({ id: 65, key: randomstring(), color: '#293132' })],
+  items: map(e => new CollectItem({ id: e.id, key: randomstring(), color: e.color }), itemsData),
 };
 
 export const Board = (state = initialState) => {

@@ -1,0 +1,14 @@
+div.colorItem {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem;
+
+  & > span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
