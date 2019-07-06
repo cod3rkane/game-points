@@ -1,17 +1,21 @@
 import React from 'react';
 
 import BoardGame from '../../components/Board';
+import PlayerInfor from '../../components/PlayerInfo';
 
 export const Main = () => {
   console.log('cod3r');
 
   return (
-    <main>
+    <div>
       <header>
         <h1>Game Points!</h1>
       </header>
-      <BoardGame />
-    </main>
+      <main>
+        <BoardGame />
+        <PlayerInfor />
+      </main>
+    </div>
   );
 };
 
