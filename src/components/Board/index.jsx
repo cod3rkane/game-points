@@ -7,7 +7,7 @@ import { collectItem } from '../../reducers/actions';
 
 export const BoardGame = ({ Board, collect }) => {
   return (
-    <div>
+    <div className="board">
       <RandomItemSpawner items={Board.items} onCollectItem={collect} />
     </div>
   );

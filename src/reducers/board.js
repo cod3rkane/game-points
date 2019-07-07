@@ -1,17 +1,32 @@
 import * as R from 'ramda';
 
-import { REMOVE_ITEM_FROM_BOARD } from './actions';
+import { REMOVE_ITEM_FROM_BOARD, NEW_GAME } from './actions';
 import { CollectItem } from '../entities/CollectItem';
 import { randomstring } from '../util/randomString';
 import { itemsData } from '../util/items';
 
+const MAX_ITEMS = 25;
+const getRandomItem = items => items[Math.floor(Math.random() * items.length)];
+const newList = () => {
+  const list = [];
+
+  for (let i = 0; i < MAX_ITEMS; i++) {
+    const item = getRandomItem(itemsData);
+    list.push(
+      new CollectItem({
+        id: item.id,
+        key: randomstring(),
+        color: item.color,
+        score: item.score,
+      }),
+    );
+  }
+
+  return list;
+};
+
 const initialState = {
-  items: R.map(
-    e => new CollectItem({
-      id: e.id, key: randomstring(), color: e.color, score: e.score,
-    }),
-    itemsData,
-  ),
+  items: newList(),
 };
 
 export const Board = (state = initialState, action) => {
@@ -22,7 +37,7 @@ export const Board = (state = initialState, action) => {
   };
   const actionHandler = R.cond([
     [R.propEq('type', REMOVE_ITEM_FROM_BOARD), removeID],
-    [R.propEq('type', 'debug'), console.log],
+    [R.propEq('type', NEW_GAME), R.always({ items: newList() })],
     [R.T, R.always(state)],
   ]);
 

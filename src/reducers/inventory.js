@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import * as R from 'ramda';
 
-import { COLLECT_ITEM } from './actions';
+import { COLLECT_ITEM, NEW_GAME } from './actions';
 import { bonusRules } from '../util/items';
 
 const initialState = {};
@@ -48,7 +48,7 @@ export const Inventory = (state = initialState, action) => {
   );
   const actionHandler = R.cond([
     [R.propEq('type', COLLECT_ITEM), collect],
-    [R.propEq('type', 'debug'), console.log],
+    [R.propEq('type', NEW_GAME), R.always({})],
     [R.T, R.always(state)],
   ]);
 

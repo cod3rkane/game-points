@@ -3,9 +3,10 @@ import * as R from 'ramda';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { collectItem } from '../../reducers/actions';
+import { CollectItem } from '../../entities/CollectItem';
+import { createNewGame } from '../../reducers/actions';
 
-export const PlayerInfor = ({ Inventory }) => {
+export const PlayerInfor = ({ Inventory, newGame }) => {
   const allScores = R.cond([
     [R.isEmpty, R.always([0])],
     [R.T, R.reduce((acc, cv) => [...acc, cv.bonus, cv.score], [])],
@@ -34,18 +35,21 @@ export const PlayerInfor = ({ Inventory }) => {
         </div>
       </section>
       <section className="actions flex">
-        <button type="button">New Game</button>
+        <button type="button" onClick={newGame}>New Game</button>
       </section>
     </div>
   );
 };
 
 PlayerInfor.propTypes = {
-  Inventory: PropTypes.objectOf(collectItem).isRequired,
+  Inventory: PropTypes.objectOf(CollectItem).isRequired,
+  newGame: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ Inventory }) => ({ Inventory });
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  newGame: () => dispatch(createNewGame()),
+});
 
 export default connect(
   mapStateToProps,

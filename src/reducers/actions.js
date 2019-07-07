@@ -16,3 +16,8 @@ export const collectItem = payload => (dispatch) => {
     payload,
   });
 };
+
+export const createNewGame = payload => ({
+  type: NEW_GAME,
+  payload,
+});
