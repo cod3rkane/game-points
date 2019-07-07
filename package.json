@@ -2,7 +2,7 @@
   "name": "game-points",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cod3rkane.github.io/game-points",
+  "homepage": "https://cod3rkane.github.io",
   "dependencies": {
     "classnames": "^2.2.6",
     "gh-pages": "^2.0.1",
