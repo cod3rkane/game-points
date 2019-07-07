@@ -8,6 +8,11 @@ import { collectItem } from '../../reducers/actions';
 export const BoardGame = ({ Board, collect }) => {
   return (
     <div className="board">
+      {Board.gameOver && (
+        <div className="game-over">
+          <h4>Game Over</h4>
+        </div>
+      )}
       <RandomItemSpawner items={Board.items} onCollectItem={collect} />
     </div>
   );
@@ -23,4 +28,7 @@ const mapDispatchToProps = dispatch => ({
   collect: item => dispatch(collectItem(item)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BoardGame);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(BoardGame);

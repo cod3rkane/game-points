@@ -27,16 +27,25 @@ const newList = () => {
 
 const initialState = {
   items: newList(),
+  gameOver: false,
 };
 
 export const Board = (state = initialState, action) => {
   const removeID = (evt) => {
-    const items = R.reject(R.propEq('key', evt.payload), state.items);
+    const itemIndex = R.findIndex(R.propEq('key', evt.payload), state.items);
+    const item = R.find(R.propEq('key', evt.payload), state.items);
+    const items = R.update(itemIndex, item.set('collected', true), state.items);
 
     return { ...state, items };
   };
+  const isGameOver = (s) => {
+    const items = R.reject(R.propEq('collected', true), s.items);
+    const gameOver = items.length <= 0;
+
+    return { ...s, gameOver };
+  };
   const actionHandler = R.cond([
-    [R.propEq('type', REMOVE_ITEM_FROM_BOARD), removeID],
+    [R.propEq('type', REMOVE_ITEM_FROM_BOARD), R.compose(isGameOver, removeID)],
     [R.propEq('type', RESET_GAME), R.always({ items: [] })],
     [R.propEq('type', NEW_GAME), R.always({ items: newList() })],
     [R.T, R.always(state)],

@@ -7,11 +7,13 @@ import { CollectItem } from '../../entities/CollectItem';
 
 export const RandomItemSpawner = ({ items, onCollectItem }) => {
   const transitions = useTransition(items, item => item.key, {
-    from: { opacity: 0, margin: 'auto' },
-    enter: { opacity: 1, margin: 'auto' },
-    leave: { opacity: 0 },
-    config: { mass: 5, tension: 500, friction: 100 },
-    trail: 10,
+    unique: true,
+    trail: 400 / items.length,
+    from: { opacity: 0, transform: 'scale(0)' },
+    enter: { opacity: 1, transform: 'scale(1)' },
+    leave: { opacity: 0, transform: 'scale(0)' },
+    update: item => [{ opacity: item.collected ? 0 : 1, transform: item.collected ? 'scale(0)' : 'scale(1)' }],
+    config: { mass: 1, tension: 500, friction: 55 },
   });
 
   return (

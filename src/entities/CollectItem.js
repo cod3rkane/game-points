@@ -7,6 +7,7 @@ export const CollectItem = Record({
   score: 0,
   bonus: 0,
   hasBonus: false,
+  collected: false,
 });
 
 export default CollectItem;
