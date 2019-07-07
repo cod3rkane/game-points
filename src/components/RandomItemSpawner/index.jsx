@@ -1,13 +1,11 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useTransition, a } from 'react-spring';
 
 import { ColorItem } from '../ColorItem';
 import { CollectItem } from '../../entities/CollectItem';
-import ClickSound from '../../assets/ballon-click.mp3';
 
 export const RandomItemSpawner = ({ items, onCollectItem }) => {
-  const audio = useRef(null);
   const transitions = useTransition(items, item => item.key, {
     from: { opacity: 0, margin: 'auto' },
     enter: { opacity: 1, margin: 'auto' },
@@ -15,10 +13,6 @@ export const RandomItemSpawner = ({ items, onCollectItem }) => {
     config: { mass: 5, tension: 500, friction: 100 },
     trail: 10,
   });
-  const onTap = (item) => {
-    onCollectItem(item);
-    audio.current.play();
-  };
 
   return (
     <div className="itemSpawner">
@@ -28,14 +22,10 @@ export const RandomItemSpawner = ({ items, onCollectItem }) => {
             key={item.key}
             id={item.id}
             color={item.color}
-            onClick={() => onTap(item)}
+            onClick={() => onCollectItem(item)}
           />
         </a.div>
       ))}
-      <audio ref={audio}>
-        <track kind="captions" />
-        <source src={ClickSound} type="audio/mpeg" />
-      </audio>
     </div>
   );
 };
