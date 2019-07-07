@@ -7,10 +7,53 @@ div.playerInfor {
     }
   }
 
-  section.score, section.score-total {
+  section.score-resume {
+    display: none;
+    color: #fff;
+
+    @include breakpoint(sm) {
+      display: block;
+      height: 524px;
+      max-height: 524px;
+      overflow-y: scroll;
+    }
+
+    div.header,
+    div.items > div {
+      display: flex;
+      margin: 0.2rem 0;
+
+      span {
+        text-align: center;
+        flex-basis: 33%;
+
+        &.color-item-small {
+          padding: 0.2rem;
+          max-width: 32px;
+          margin: auto;
+          border-radius: 4px;
+        }
+      }
+
+      h4 {
+        text-align: center;
+        flex-basis: 33%;
+        text-transform: uppercase;
+        background: linear-gradient(to top, #ff8a00 0%, #da1b60 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font: {
+          family: 'grandHotel';
+        }
+      }
+    }
+  }
+
+  section.score,
+  section.score-total {
     align-items: center;
     flex-wrap: wrap;
-  
+
     & h4 {
       text-transform: uppercase;
       background: linear-gradient(to top, #ff8a00 0%, #da1b60 100%);
@@ -21,8 +64,9 @@ div.playerInfor {
         family: 'grandHotel';
       }
     }
-  
-    & span.bonus, span.score {
+
+    & span.bonus,
+    span.score {
       display: block;
       margin: 0 auto;
       flex-basis: 60%;

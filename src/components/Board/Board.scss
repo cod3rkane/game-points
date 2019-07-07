@@ -1,6 +1,12 @@
 div.board {
+  max-width: 382px;
   height: 368px;
   overflow: hidden;
+  margin: auto;
+
+  @include breakpoint(sm) {
+    margin: 0 auto;
+  }
 
   div.game-over {
     height: 100%;
