@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/game-points/static/css/main.3a0ceb55.chunk.css",
+    "main.js": "/game-points/static/js/main.139896fc.chunk.js",
+    "main.js.map": "/game-points/static/js/main.139896fc.chunk.js.map",
+    "runtime~main.js": "/game-points/static/js/runtime~main.e02ed900.js",
+    "runtime~main.js.map": "/game-points/static/js/runtime~main.e02ed900.js.map",
+    "static/js/2.2c2d8cad.chunk.js": "/game-points/static/js/2.2c2d8cad.chunk.js",
+    "static/js/2.2c2d8cad.chunk.js.map": "/game-points/static/js/2.2c2d8cad.chunk.js.map",
+    "index.html": "/game-points/index.html",
+    "precache-manifest.b081ad24f82086cee574f3cbab13e024.js": "/game-points/precache-manifest.b081ad24f82086cee574f3cbab13e024.js",
+    "service-worker.js": "/game-points/service-worker.js",
+    "static/css/main.3a0ceb55.chunk.css.map": "/game-points/static/css/main.3a0ceb55.chunk.css.map",
+    "static/media/index.scss": "/game-points/static/media/GrandHotel-Regular.12b13e1f.otf",
+    "static/media/logo.svg": "/game-points/static/media/logo.5d5d9eef.svg"
+  }
+}
