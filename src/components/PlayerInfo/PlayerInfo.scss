@@ -1,8 +1,15 @@
 div.playerInfor {
   padding: 1rem;
 
-  section.score-bonus, section.score-total {
+  section.score {
+    div {
+      flex-basis: 50%;
+    }
+  }
+
+  section.score, section.score-total {
     align-items: center;
+    flex-wrap: wrap;
   
     & h4 {
       text-transform: uppercase;
@@ -16,6 +23,8 @@ div.playerInfor {
     }
   
     & span.bonus, span.score {
+      display: block;
+      margin: 0 auto;
       flex-basis: 60%;
       text-align: center;
       text-transform: uppercase;
@@ -33,12 +42,11 @@ div.playerInfor {
     flex-direction: column;
   }
 
-  div.actions {
-    justify-content: end;
+  section.actions {
+    justify-content: flex-end;
   }
 
   button {
-    display: block;
     border: none;
     padding: 1rem;
     border-radius: 8px;

@@ -2,11 +2,11 @@ import { Record } from 'immutable';
 
 export const CollectItem = Record({
   id: Number,
-  color: String,
-  key: String,
-  score: Number,
-  bonus: Number,
-  hasBonus: Boolean,
+  color: '',
+  key: '',
+  score: 0,
+  bonus: 0,
+  hasBonus: false,
 });
 
 export default CollectItem;
