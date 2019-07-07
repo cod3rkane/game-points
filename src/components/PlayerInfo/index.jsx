@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { collectItem } from '../../reducers/actions';
 
 export const PlayerInfor = ({ Inventory }) => {
-  console.log(Inventory);
   return (
     <div className="playerInfor">
       <div>
