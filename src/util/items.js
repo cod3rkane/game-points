@@ -1,5 +1,15 @@
 export const itemsData = [
   { id: 65, color: '#293132', score: 50 },
+  { id: 65, color: '#293132', score: 50 },
+  { id: 65, color: '#293132', score: 50 },
+  { id: 65, color: '#293132', score: 50 },
+  { id: 65, color: '#293132', score: 50 },
+  { id: 65, color: '#293132', score: 50 },
+  { id: 66, color: '#474044', score: 30 },
+  { id: 66, color: '#474044', score: 30 },
+  { id: 66, color: '#474044', score: 30 },
+  { id: 66, color: '#474044', score: 30 },
+  { id: 66, color: '#474044', score: 30 },
   { id: 66, color: '#474044', score: 30 },
   { id: 67, color: '#4398f2', score: 20 },
   { id: 68, color: '#547aa5', score: 15 },
@@ -27,9 +37,13 @@ export const itemsData = [
   { id: 90, color: '#494670', score: 10 },
 ];
 
-export const bonusRules = [
-  { id: 65, score: 16, group: 3 },
-  { id: 66, score: 15, group: 2 },
-];
+export const bonusRules = {
+  65: {
+    score: 50, group: 3,
+  },
+  66: {
+    score: 30, group: 2,
+  },
+};
 
 export default itemsData;
