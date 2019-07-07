@@ -1,6 +1,6 @@
 import * as R from 'ramda';
 
-import { REMOVE_ITEM_FROM_BOARD, NEW_GAME } from './actions';
+import { REMOVE_ITEM_FROM_BOARD, NEW_GAME, RESET_GAME } from './actions';
 import { CollectItem } from '../entities/CollectItem';
 import { randomstring } from '../util/randomString';
 import { itemsData } from '../util/items';
@@ -37,6 +37,7 @@ export const Board = (state = initialState, action) => {
   };
   const actionHandler = R.cond([
     [R.propEq('type', REMOVE_ITEM_FROM_BOARD), removeID],
+    [R.propEq('type', RESET_GAME), R.always({ items: [] })],
     [R.propEq('type', NEW_GAME), R.always({ items: newList() })],
     [R.T, R.always(state)],
   ]);

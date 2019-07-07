@@ -13,11 +13,7 @@ export const RandomItemSpawner = ({ items, onCollectItem }) => {
     enter: { opacity: 1, margin: 'auto' },
     leave: { opacity: 0 },
     config: { mass: 5, tension: 500, friction: 100 },
-    trail: {
-      enter: 25,
-      update: 25,
-      leave: 0,
-    },
+    trail: 25,
   });
   const onTap = (item) => {
     onCollectItem(item);
