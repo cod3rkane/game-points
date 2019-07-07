@@ -20,7 +20,7 @@ export const collectItem = payload => (dispatch) => {
 
 export const createNewGame = payload => (dispatch, getState) => {
   const state = getState();
-  const time = state.Board.items.length > 0 ? 2000 : 0;
+  const time = state.Board.items.length > 0 ? 1300 : 0;
 
   dispatch({ type: RESET_GAME });
   setTimeout(
