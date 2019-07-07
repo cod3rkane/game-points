@@ -1,4 +1,17 @@
 header {
   display: flex;
   justify-content: center;
+
+  h1 {
+    flex-basis: 60%;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(to top, #ff8a00 0%, #da1b60 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: {
+      size: 34px;
+      family: 'grandHotel';
+    }
+  }
 }

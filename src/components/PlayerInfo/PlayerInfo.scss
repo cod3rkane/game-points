@@ -1,0 +1,49 @@
+div.playerInfor {
+  padding: 1rem;
+
+  section.score-bonus, section.score-total {
+    align-items: center;
+  
+    & h4 {
+      text-transform: uppercase;
+      background: linear-gradient(to top, #ff8a00 0%, #da1b60 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font: {
+        size: 34px;
+        family: 'grandHotel';
+      }
+    }
+  
+    & span.bonus, span.score {
+      flex-basis: 60%;
+      text-align: center;
+      text-transform: uppercase;
+      background: linear-gradient(to top, #ff8a00 0%, #da1b60 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font: {
+        size: 34px;
+        family: 'grandHotel';
+      }
+    }
+  }
+
+  section.score-total {
+    flex-direction: column;
+  }
+
+  div.actions {
+    justify-content: end;
+  }
+
+  button {
+    display: block;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    background: linear-gradient(to top, #ff8a00 0%, #f7d94d 100%);
+    color: #fff;
+    font-size: 18px;
+  }
+}
