@@ -42,5 +42,5 @@ A     |  50           |  200 for 3<br>
 B     |  30           |  90 for 2<br>
 
 # Images:
-![Pic1](https://imgur.com/wkOWUCF)
-![Pic1](https://imgur.com/A2adAmQ)
+![Pic1](https://i.imgur.com/wkOWUCF.png)
+![Pic1](https://i.imgur.com/A2adAmQ.png)
