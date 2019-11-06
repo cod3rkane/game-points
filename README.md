@@ -40,3 +40,7 @@ week we have a special bonus: collect three ‘A’s and they’ll be worth 200 
 Item  |  Unit Points  |  Bonus<br>
 A     |  50           |  200 for 3<br>
 B     |  30           |  90 for 2<br>
+
+# Images:
+![Pic1](https://imgur.com/wkOWUCF)
+![Pic1](https://imgur.com/A2adAmQ)
