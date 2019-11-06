@@ -20,10 +20,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ```
   npm install
-  npm run dev
+  npm start
   # or
   yarn
-  yarn dev
+  yarn start
 ```
 
 
