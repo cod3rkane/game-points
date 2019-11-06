@@ -37,6 +37,6 @@ and you’ll get y points. For example, item ‘A’ might be worth 50 points in
 week we have a special bonus: collect three ‘A’s and they’ll be worth 200 points instead of
 150. In fact this weeks rewards are:
 
-Item  |  Unit Points  |  Bonus
-A     |  50           |  200 for 3
-B     |  30           |  90 for 2
+Item  |  Unit Points  |  Bonus<br>
+A     |  50           |  200 for 3<br>
+B     |  30           |  90 for 2<br>
